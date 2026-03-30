@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Chat Segreta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Entra nella Chat Segreta</h2>
+  <form method="POST" action="/login">
+    <input type="text" placeholder="Nome utente" name="username" required /><br/>
+    <input type="password" placeholder="Password" name="password" required /><br/>
+    <button type="submit">Login</button>
+    <p style="color:red;">
+      <script>
+        if (window.location.search.includes('error=1')) {
+          document.write("Credenziali errate!");
+        }
+      </script>
+    </p>
+  </form>
+</body>
+</html>
