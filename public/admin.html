@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Chat Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Riepilogo Chat (Admin)</h2>
+  <a href="/logout">Logout</a>
+  <div id="chat-log" class="chat-box"></div>
+  <script>
+    // Carica tutti i messaggi in sola lettura
+    fetch('/api/messages')
+      .then(r => r.json())
+      .then(messages => {
+        const log = document.getElementById('chat-log');
+        log.innerHTML = messages.map(m =>
+          `<div><b>${m.user}:</b> ${m.text} <span style="font-size:0.8em;color:gray">(${m.time})</span></div>`
+        ).join('');
+      });
+  </script>
+</body>
+</html>
