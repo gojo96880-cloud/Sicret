@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Segreta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Chat Segreta</h2>
+  <a href="/logout">Logout</a>
+  <div id="chat-box" class="chat-box"></div>
+  <form id="chat-form" autocomplete="off">
+    <input id="msg-input" type="text" placeholder="Scrivi un messaggio..." required autofocus />
+    <button type="submit">Invia</button>
+  </form>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
