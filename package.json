@@ -1,5 +1,5 @@
 {
-  "name": "chat-segreta",
+  "name": "new-note",
   "version": "1.0.0",
   "description": "Chat segreta fra due persone, con area admin",
   "main": "server.js",
